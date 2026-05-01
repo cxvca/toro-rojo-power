@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         <p className="mt-8 text-xs text-muted-foreground font-body">
-          © 2025 Toro Rojo Barbershop · Todos los derechos reservados
+          © 2026 Toro Rojo Barbershop · Todos los derechos reservados
         </p>
       </div>
     </footer>
