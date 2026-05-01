@@ -98,7 +98,18 @@ const Navbar = () => {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setOpen(false);
+                    const id = l.href.replace("#", "");
+                    setTimeout(() => {
+                      const el = document.getElementById(id);
+                      if (el) {
+                        const y = el.getBoundingClientRect().top + window.scrollY - 80;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                      }
+                    }, 250);
+                  }}
                   className="font-condensed font-semibold text-lg uppercase tracking-widest text-foreground hover:text-primary"
                 >
                   {l.label}
