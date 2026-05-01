@@ -1,16 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/toro/Navbar";
+import Hero from "@/components/toro/Hero";
+import Marquee from "@/components/toro/Marquee";
+import Services from "@/components/toro/Services";
+import Booking from "@/components/toro/Booking";
+import Gallery from "@/components/toro/Gallery";
+import WhyToro from "@/components/toro/WhyToro";
+import Location from "@/components/toro/Location";
+import Footer from "@/components/toro/Footer";
+import FloatingWhatsApp from "@/components/toro/FloatingWhatsApp";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main>
+        <Hero />
+        <Marquee />
+        <Services />
+        <Booking />
+        <Gallery />
+        <WhyToro />
+        <Location />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
