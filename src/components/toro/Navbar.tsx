@@ -7,6 +7,7 @@ const WHATSAPP = "https://wa.me/34658041525";
 
 const links = [
   { href: "#servicios", label: "Servicios" },
+  { href: "#resenas", label: "Reseñas" },
   { href: "#galeria", label: "Galería" },
   { href: "#equipo", label: "Equipo" },
   { href: "#contacto", label: "Contacto" },
