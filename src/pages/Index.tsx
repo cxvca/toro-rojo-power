@@ -2,6 +2,7 @@ import Navbar from "@/components/toro/Navbar";
 import Hero from "@/components/toro/Hero";
 import Marquee from "@/components/toro/Marquee";
 import Services from "@/components/toro/Services";
+import Reviews from "@/components/toro/Reviews";
 import Booking from "@/components/toro/Booking";
 import Gallery from "@/components/toro/Gallery";
 import WhyToro from "@/components/toro/WhyToro";
@@ -17,6 +18,7 @@ const Index = () => {
         <Hero />
         <Marquee />
         <Services />
+        <Reviews />
         <Booking />
         <Gallery />
         <WhyToro />
