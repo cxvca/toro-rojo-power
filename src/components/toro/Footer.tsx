@@ -20,6 +20,8 @@ const Footer = () => {
         <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-8 font-condensed uppercase tracking-widest text-sm">
           <a href="#servicios" className="text-foreground/80 hover:text-primary transition-colors">Servicios</a>
           <span className="text-gold">✦</span>
+          <a href="#resenas" className="text-foreground/80 hover:text-primary transition-colors">Reseñas</a>
+          <span className="text-gold">✦</span>
           <a href="#galeria" className="text-foreground/80 hover:text-primary transition-colors">Galería</a>
           <span className="text-gold">✦</span>
           <a href="#reservas" className="text-foreground/80 hover:text-primary transition-colors">Reservar</a>
