@@ -1,15 +1,21 @@
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
+import interior from "@/assets/gallery/interior.webp";
+import fade from "@/assets/gallery/fade.jpg";
+import barba from "@/assets/gallery/barba.jpg";
+import camiseta from "@/assets/gallery/camiseta.jpg";
+import barberos from "@/assets/gallery/barberos.jpg";
+import equipo from "@/assets/gallery/equipo.jpg";
+import navaja from "@/assets/gallery/navaja.jpg";
 
-/* Reemplazar con imágenes reales del Instagram @tororojobarberia */
 const images = [
-  { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80", alt: "Corte fade premium", span: "md:col-span-2 md:row-span-2" },
-  { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80", alt: "Arreglo de barba", span: "" },
-  { src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80", alt: "Barbería interior", span: "" },
-  { src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80", alt: "Corte a tijera", span: "md:row-span-2" },
-  { src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80", alt: "Detalle navaja", span: "" },
-  { src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80", alt: "Estilo clásico", span: "" },
-  { src: "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=900&q=80", alt: "Cliente premium", span: "md:col-span-2" },
+  { src: interior, alt: "Interior de Toro Rojo Barbershop en Calle Alcalá 176" },
+  { src: fade, alt: "Fade de precisión con navaja" },
+  { src: equipo, alt: "Equipo de Toro Rojo Barbershop" },
+  { src: barba, alt: "Ritual de arreglo de barba con toalla caliente" },
+  { src: navaja, alt: "Trabajo a navaja con detalle premium" },
+  { src: barberos, alt: "Barberos preparando herramientas" },
+  { src: camiseta, alt: "Identidad Toro Rojo — camiseta oficial" },
 ];
 
 const Gallery = () => {
@@ -27,7 +33,8 @@ const Gallery = () => {
           <h2 className="font-display text-6xl md:text-8xl text-primary tracking-wider">NUESTRO TRABAJO</h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[220px] gap-3">
+        {/* Mobile: 2 columnas auto */}
+        <div className="grid grid-cols-2 auto-rows-[200px] gap-3 md:hidden">
           {images.map((img, i) => (
             <motion.a
               key={i}
@@ -38,20 +45,31 @@ const Gallery = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className={`group relative overflow-hidden bg-steel ${img.span}`}
+              className={`group relative overflow-hidden bg-steel ${i === 0 ? "col-span-2 row-span-2" : ""}`}
             >
               <img
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <Instagram className="w-10 h-10 text-foreground" />
-              </div>
               <div className="absolute inset-0 ring-1 ring-inset ring-foreground/5" />
             </motion.a>
           ))}
+        </div>
+
+        {/* Tablet/Desktop: grid ordenado tipo mosaico */}
+        <div className="hidden md:grid grid-cols-12 auto-rows-[180px] lg:auto-rows-[200px] gap-4">
+          {/* Hero grande izquierda */}
+          <GalleryItem img={images[0]} className="col-span-6 row-span-2" delay={0} />
+          {/* Dos verticales arriba derecha */}
+          <GalleryItem img={images[1]} className="col-span-3 row-span-2" delay={0.05} />
+          <GalleryItem img={images[2]} className="col-span-3 row-span-2" delay={0.1} />
+          {/* Fila inferior: 3 cuadradas + 1 ancha */}
+          <GalleryItem img={images[3]} className="col-span-3 row-span-2" delay={0.15} />
+          <GalleryItem img={images[4]} className="col-span-3 row-span-2" delay={0.2} />
+          <GalleryItem img={images[5]} className="col-span-3 row-span-2" delay={0.25} />
+          <GalleryItem img={images[6]} className="col-span-3 row-span-2" delay={0.3} />
         </div>
 
         <div className="text-center mt-10">
@@ -69,5 +87,37 @@ const Gallery = () => {
     </section>
   );
 };
+
+const GalleryItem = ({
+  img,
+  className,
+  delay,
+}: {
+  img: { src: string; alt: string };
+  className: string;
+  delay: number;
+}) => (
+  <motion.a
+    href="https://www.instagram.com/tororojobarberia"
+    target="_blank"
+    rel="noopener noreferrer"
+    initial={{ opacity: 0, scale: 0.96 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ duration: 0.5, delay }}
+    className={`group relative overflow-hidden bg-steel ${className}`}
+  >
+    <img
+      src={img.src}
+      alt={img.alt}
+      loading="lazy"
+      className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+    />
+    <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <Instagram className="w-10 h-10 text-foreground" />
+    </div>
+    <div className="absolute inset-0 ring-1 ring-inset ring-foreground/5" />
+  </motion.a>
+);
 
 export default Gallery;
