@@ -16,7 +16,6 @@ const popularServices = [
     desc: "Corte personalizado clásico o moderno según tu estilo, acabado con productos.",
     duration: "40 min",
     price: "20,00€",
-    discountPrice: "16,00€",
   },
   {
     icon: "✂️",
@@ -24,7 +23,6 @@ const popularServices = [
     desc: "Corte completo + arreglo y perfilado de barba, acabado profesional.",
     duration: "1h",
     price: "30,00€",
-    discountPrice: "24,00€",
   },
   {
     icon: "✂️",
@@ -32,7 +30,6 @@ const popularServices = [
     desc: "Corte adaptado para los más pequeños, trato especial y cuidadoso.",
     duration: "35 min",
     price: "12,00€",
-    discountPrice: "9,60€",
   },
 ];
 
@@ -175,10 +172,7 @@ const Services = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <span className="font-condensed text-xs uppercase tracking-widest text-gold">{s.duration}</span>
-                  <div className="text-right">
-                    <span className="font-condensed text-muted-foreground line-through text-sm mr-2">{s.price}</span>
-                    <span className="font-condensed font-bold text-gold text-xl">{s.discountPrice}</span>
-                  </div>
+                  <span className="font-condensed font-bold text-gold text-xl">{s.price}</span>
                 </div>
               </motion.div>
             ))}
@@ -275,7 +269,7 @@ const Services = () => {
         </motion.div>
 
         {/* CTA general */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={WHATSAPP}
             target="_blank"
@@ -283,6 +277,14 @@ const Services = () => {
             className="inline-flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-condensed font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all duration-300"
           >
             <Scissors className="w-4 h-4" /> Ver disponibilidad en WhatsApp
+          </a>
+          <a
+            href="https://booksy.com/es-es/dl/show-business/169791"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border-2 border-gold text-gold hover:bg-gold hover:text-background font-condensed font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all duration-300"
+          >
+            <Star className="w-4 h-4" /> Reservar en Booksy
           </a>
         </div>
 
