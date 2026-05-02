@@ -76,10 +76,12 @@ const Booking = () => {
             <p className="font-body text-sm text-muted-foreground mt-3 break-all">empleotororojo@gmail.com</p>
             <a
               href="mailto:empleotororojo@gmail.com"
-              className="mt-auto pt-6 inline-flex items-center justify-center gap-2 border-2 border-gold text-gold hover:bg-gold hover:text-background font-condensed font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300"
+              className="mt-auto pt-6"
             >
-              <Mail className="w-4 h-4" />
-              Enviar CV
+              <span className="inline-flex w-auto items-center justify-center gap-2 border-2 border-gold text-gold hover:bg-gold hover:text-background font-condensed font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 text-center">
+                <Mail className="w-4 h-4" />
+                Enviar CV
+              </span>
             </a>
           </motion.div>
         </div>
