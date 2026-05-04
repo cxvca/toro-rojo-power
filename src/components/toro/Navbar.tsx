@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import toroLogo from "@/assets/toro-logo.png";
 
 
 const WHATSAPP = "https://wa.me/34658041525";
