@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import toroLogo from "@/assets/toro-logo.png";
 
 
 const WHATSAPP = "https://wa.me/34658041525";
@@ -34,6 +35,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-20">
         <a href="#top" className="flex items-center gap-3 group">
+          <img src={toroLogo} alt="Toro Rojo" className="h-12 w-12 object-contain" />
           <span className="font-display text-2xl tracking-widest text-foreground">
             TORO <span className="text-primary">ROJO</span>
           </span>
