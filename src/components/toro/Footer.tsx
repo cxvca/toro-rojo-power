@@ -1,16 +1,9 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
-import toroLogo from "@/assets/toro-logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-background border-t-2 border-blood pt-14 pb-8">
       <div className="container text-center">
-        <img
-          src={toroLogo}
-          alt="Toro Rojo Barbershop logo"
-          className="h-20 w-20 object-contain mx-auto"
-          loading="lazy"
-        />
         <p className="font-display text-3xl md:text-4xl tracking-[0.25em] text-gold mt-5">
           LUCE EL ÉXITO, SIENTE EL PODER
         </p>
