@@ -10,7 +10,6 @@ const Footer = () => {
         <img
           src={LOGO}
           alt="Toro Rojo Barbershop logo"
-          crossOrigin="anonymous"
           className="h-20 w-20 object-contain mx-auto mix-blend-screen brightness-110 contrast-125"
           loading="lazy"
         />
