@@ -1,7 +1,6 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
-import logoUrl from "@/assets/toro-logo.jpg";
-const LOGO = logoUrl;
+const LOGO = "/toro-logo.jpg";
 
 const Footer = () => {
   return (
