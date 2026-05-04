@@ -1,5 +1,6 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
-import { TORO_LOGO as LOGO } from "@/assets/toroLogo";
+
+const LOGO = "https://ugc.production.linktr.ee/b72c8c8a-4d58-47e8-993a-608c20b5a73f_Logo-Toro-Rojo-variantes-17.jpeg";
 
 const Footer = () => {
   return (
@@ -8,6 +9,7 @@ const Footer = () => {
         <img
           src={LOGO}
           alt="Toro Rojo Barbershop logo"
+          crossOrigin="anonymous"
           className="h-20 w-20 object-contain mx-auto mix-blend-screen brightness-110 contrast-125"
           loading="lazy"
         />

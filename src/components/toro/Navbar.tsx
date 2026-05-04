@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { TORO_LOGO as LOGO } from "@/assets/toroLogo";
+const LOGO = "https://ugc.production.linktr.ee/b72c8c8a-4d58-47e8-993a-608c20b5a73f_Logo-Toro-Rojo-variantes-17.jpeg";
 const WHATSAPP = "https://wa.me/34658041525";
 
 const links = [
@@ -37,6 +37,7 @@ const Navbar = () => {
           <img
             src={LOGO}
             alt="Toro Rojo Barbershop logo"
+            crossOrigin="anonymous"
             className="h-12 w-12 object-contain rounded-sm mix-blend-screen brightness-110 contrast-125"
             loading="eager"
           />
