@@ -1,4 +1,5 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
+import toroLogo from "@/assets/toro-logo.png";
 
 const Footer = () => {
   return (
