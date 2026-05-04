@@ -1,6 +1,7 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
-const LOGO = "https://ugc.production.linktr.ee/b72c8c8a-4d58-47e8-993a-608c20b5a73f_Logo-Toro-Rojo-variantes-17.jpeg";
+import logoUrl from "@/assets/toro-logo.jpg";
+const LOGO = logoUrl;
 
 const Footer = () => {
   return (
