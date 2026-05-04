@@ -38,7 +38,6 @@ const Navbar = () => {
           <img
             src={LOGO}
             alt="Toro Rojo Barbershop logo"
-            crossOrigin="anonymous"
             className="h-12 w-12 object-contain rounded-sm mix-blend-screen brightness-110 contrast-125"
             loading="eager"
           />
