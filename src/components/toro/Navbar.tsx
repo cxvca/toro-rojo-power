@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { TORO_LOGO as LOGO } from "@/assets/toroLogo";
+const LOGO = "/toro-logo.jpg";
 const WHATSAPP = "https://wa.me/34658041525";
 
 const links = [
